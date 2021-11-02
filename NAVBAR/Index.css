@@ -1,0 +1,148 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+#header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    overflow: hidden;
+}
+
+#work {
+    border-bottom: white 1.5px solid;
+}
+
+img#logo {
+    display: block;
+    height: 75px;
+    width: 240px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+#header a {
+    font-family: Georgia;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: calc((1.37 - 1) * 1.2vw + 1rem);
+    color: white;
+}
+
+#header section {
+    margin-right: 40px;
+    height: 27px;
+    overflow: hidden;
+}
+
+#header section a {
+    margin-right: 40px;
+}
+
+#menu-button {
+    display: none;
+    margin-right: 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#menu-button:hover {
+    cursor: pointer;
+}
+
+.height {
+    height: 50px !important;
+}
+
+#menu-button div {
+    height: 2px;
+    width: 35px;
+    background-color: white;
+    margin: 0.5rem;
+    transition: 0.3s all;
+}
+
+.top-bun-open {
+    transform: translate(0px, 15px) rotate(-45deg) scalex(1.3);
+}
+
+.bottom-bun-open {
+    transform: translate(1px, 6px) rotate(45deg) scalex(1.3);
+}
+
+@media Screen and (max-width:1000px) {
+    #header section {
+        display: none;
+    }
+    #menu-button {
+        display: block;
+    }
+}
+
+@media Screen and (max-width:600px) {
+    #menu-button {
+        margin-right: 20px;
+    }
+}
+
+#show-links-wrap {
+    display: none;
+    transition: 10s all;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.menu-open {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#show-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0;
+    animation: opacity 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+#show-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 2rem;
+}
