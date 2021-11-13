@@ -32,22 +32,25 @@ html{
 
 #loader h1 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-left: 20px;
+  font-size: 20px;
   margin-top: 40px;
+  text-align: center;
+  max-width: 90vw;
 }
 
 .loader-body {
-  margin-top: -40px;
+  margin-top: -60px;
   animation: speeder 0.4s linear infinite;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
 }
 
 @media screen and (max-width: 600px){
   .loader-body {
-    margin-top: -80px;
+    margin-top: -100px;
   }
   
   #loader h1 {
