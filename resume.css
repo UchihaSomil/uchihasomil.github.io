@@ -326,10 +326,21 @@ img#logo {
     font-weight: normal;
     line-height: 1.55;
     letter-spacing: .01em;
+    background: #F7F9FC !important;
+    /* background: rgb(255, 255, 255) !important; */
+}
+
+body{
+background-color: #F7F9FC;
+/* background: blue; */
+}
+
+.bg-cl-black {
+  background-color: #f7f9fc !important;
 }
 
 #resume a{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
@@ -343,7 +354,10 @@ img#logo {
 }
 
 h3{
-    color: #8e8885;
+    color: #050505;
+}
+h2{
+  color: #000000;
 }
 
 #resume h3 {
@@ -360,11 +374,20 @@ h3{
     font-size: calc((2.8 - 1) * 1.2vw + 14px);
 }
 
+.cl-white {
+  color: black;
+}
+
+.cl-white {
+  color: #212121 !important;
+}
+
 #resume hr {
-    background-color: #333432;
+    background-color: #b3b3b3 !important;
     border: none;
     height: 1px;
     padding-top: 0px !important;
+    width: 100vw;
 }
 
 #resume .link-border {
