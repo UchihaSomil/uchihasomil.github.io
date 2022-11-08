@@ -56,12 +56,12 @@
   <style id="sectionThemesStyles">
     /*! Squarespace LESS Compiler  (less.js language v1.3.3)  */
     body {
-      background: #F7F9FC;
+      background: #000000;
     }
 
     @media (max-width: 767px) {
       body {
-        background-color: #f7f7f7;
+        background-color: #000000;
       }
     }
 
@@ -441,16 +441,16 @@
     }
 
     .background-op {
-      background: #F7F9FC !important;
+      background: #000000 !important;
     }
 
     .collection-list-wrapper-3 {
       width: 80%;
-      max-width: 1145px;
+      max-width: 1320px;
       padding-top: 80px;
       margin-right: auto;
       margin-left: auto;
-      background: #F7F9FC !important;
+      background: #000000 !important;
       background-clip: border-box;
     }
 
@@ -460,9 +460,9 @@
       display: -ms-flexbox;
       display: flex;
       overflow: hidden;
-      height: 500px;
+      height: 600px;
       margin-bottom: 40px;
-      border-radius: 10px;
+      border-radius: 2px;
       box-shadow: 0 20px 20px 0 rgb(0 0 0 / 3%);
       -webkit-transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -519,13 +519,20 @@
       width: 93%;
     }
     }
+      
+
+    
+
+
+   
+
 
     .featured-text-block {
       position: relative;
       display: inline-block;
       width: 510px;
       height: 100%;
-      padding: 50px 50px;
+      padding: 64px 64px;
       float: left;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -543,8 +550,153 @@
       -webkit-align-items: stretch;
       -ms-flex-align: stretch;
       align-items: stretch;
-      background-color: rgb(255 255 255);
+      background: linear-gradient(56.47deg, #0F0F10 1.02%, #212227 98.5%);
+      box-shadow: 8px 12px 50px rgba(0, 0, 0, 0.4);
+                
     }
+
+    .featured-text-block {
+  touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  /* border: 1px solid; */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  /* opacity: 0.6; */
+  color: #FFF;
+  /* padding-left: 4px; */
+}
+
+featured-text-block__text:hover .button{
+
+  color: #63FF49;
+}
+
+.featured-text-block__text {
+  /* font-family: "Syne", sans-serif; */
+  /* display: block; */
+  /* padding: 8px 20px; */
+  /* text-transform: uppercase; */
+  /* font-weight: 500; */
+}
+.featured-text-block__text:before {
+  content: attr(title);
+}
+.featured-text-block__text--bis {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* transform: translateX(); */
+  opacity: 0;
+}
+
+.featured-text-block__mask {
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
+  /* transform: scale(1) !important; */
+  background: white;
+  transform: translateX(110%);
+  transition: all 0.3s;
+}
+
+.featured-text-block:hover {
+  opacity: 1;
+}
+
+
+
+.featured-text-block:hover .featured-text-block__text {
+  -webkit-animation: fx-text 0.25s ease-out;
+          animation: fx-text 0.25s ease-out;
+}
+.featured-text-block:hover .featured-text-block__text--bis {
+  -webkit-animation: fx-text-bis 0.25s ease-out;
+          animation: fx-text-bis 0.25s ease-out;
+}
+.featured-text-block:hover .featured-text-block__mask {
+  -webkit-animation: fx-mask 0.25s ease-out;
+          animation: fx-mask 0.25s ease-out;
+}
+
+
+
+.featured-text-block:hover .featured-text-block__mask {
+  -webkit-animation: fx-mask1 0.4s ease-out;
+          animation: fx-mask1 0.4s ease-out;
+}
+
+
+
+@-webkit-keyframes fx-mask1 {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(90deg);
+  }
+}
+
+@keyframes fx-mask1 {
+  0% {
+    transform: translateX(-100%) rotate(60deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(60deg);
+  }
+}
+@-webkit-keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
     @media screen and (max-width: 767px) {
       .featured-text-block {
@@ -608,6 +760,7 @@
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
+      color:#E2E2E2 ;
     }
 
     .featured-date {
@@ -634,6 +787,13 @@
       font-size: 42px;
       line-height: 140%;
       font-weight: 600;
+      
+      background: linear-gradient(89.63deg, #FFFFFF 0.96%, rgba(255, 255, 255, 0.46) 99.76%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent; 
+      font-family: 'Syne', sans-serif; font-weight: 700; margin-top: 32px;
     }
 
     @media only screen and (max-width: 992px) {
@@ -652,6 +812,7 @@
       line-height: 160%;
       font-weight: 400;
       letter-spacing: 0.5px;
+      color:#E2E2E2 ;font-family: 'Syne', sans-serif ; font-weight: 300;
     }
 
     .skill-wrapper-featured {
@@ -1170,7 +1331,10 @@
     }
 
     #work {
-      border-bottom: white 1.5px solid !important;
+      color: #63FF49 !important;
+      padding-bottom: 4px;
+      
+      border-bottom: #63FF49 2px solid !important;
     }
 
     img#logo {
@@ -1202,7 +1366,7 @@
 
     #header section {
       margin-right: 40px;
-      height: 28px;
+      height: 32px;
       overflow: hidden;
 
     }
@@ -1211,18 +1375,20 @@
 
     #header section a {
       /* font-family: Quicksand !important; */
-      font-family: 'Oswald', sans-serif;
+      /* font-family: 'Oswald', sans-serif; */
+font-family: "Syne", sans-serif;
+
 
       margin-right: 40px;
       color: white;
-      font-size: calc((1.37 - 1) * 1.2vw + 1.1rem);
+      font-size: calc((1.37 - 1) * 1.2vw + 1.15rem);
       position: relative;
       z-index: 10000;
       font-weight: 500;
     }
 
     #header section a:hover {
-      color: rgb(247, 84, 27);
+      color: #63FF49;
     }
 
     #menu-button {
@@ -1323,6 +1489,8 @@
     #show-links a {
       text-decoration: none;
       color: white;
+  font-family: "Syne", sans-serif;
+
       font-size: 2rem;
       margin: 2rem;
     }
@@ -2116,11 +2284,144 @@
       height: 95%;
       z-index: 2;
     }
+
+
+
+  .button {
+  touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  /* border: 1px solid; */
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  overflow: hidden;
+  /* opacity: 0.6; */
+  color: #63FF49;
+  
+  margin-top: 84px !important;
+  /* padding-left: 4px; */
+}
+.featuredCTA {
+  font-family: "Syne", sans-serif;
+  /* display: block; */
+  /* padding: 8px 20px; */
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.button__text {
+  font-family: "Syne", sans-serif;
+  display: block;
+  /* padding: 8px 20px; */
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.button__text:before {
+  content: attr(title);
+}
+
+
+.button:hover {
+  opacity: 1;
+}
+.button:hover .button__text {
+  -webkit-animation: fx-text 0.3s ease-out;
+          animation: fx-text 0.3s ease-out;
+}
+.button:hover .button__text--bis {
+  -webkit-animation: fx-text-bis 0.3s ease-out;
+          animation: fx-text-bis 0.3s ease-out;
+}
+.button:hover .button__mask {
+  -webkit-animation: fx-mask 0.3s ease-out;
+          animation: fx-mask 0.3s ease-out;
+}
+
+.button:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+@-webkit-keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+@-webkit-keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
   </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="overflow-hidden">
@@ -2223,7 +2524,7 @@
     </div>
     <section id="show-links-wrap">
       <div id="show-links">
-        <a href="">Work</a>
+        <a href="" style="color: #63FF49; !important">Work</a>
         <!-- <a href="https://drive.google.com/file/d/1tGYQwCBci0t6l6WESmu_NBzxDY6Fohbl/view" target="_blank">Resume</a> -->
         <a href="/resume.html" target="_blank">Resume</a>
         <a href="/about.html">About</a>
@@ -2245,9 +2546,9 @@
         <div class="flex-center">
           <div class="flex-center__inner">
             <h1 class="title title--display js-lines-l">
-              <div class="title-bold" style="font-family: 'Syne', sans-serif;">
+              <div class="title-bold" style="font-family: 'Syne', sans-serif; font-weight: 700;">
                 Hi, I'm <span class="text--red" >Somil Jain</span></div>
-              <div class="title-light"  style="font-family: 'Syne', sans-serif;">I’m a Self taught
+              <div class="title-light"  style="font-family: 'Syne', sans-serif; font-weight: 700;">I’m a Self taught
 
                 Product Designer who loves to work on technology, currently
                 studying at IIT Roorkee.</div>
@@ -2291,7 +2592,7 @@
           <div class="section-headline-wrapper pl-0">
             <div class="section-divider section-header">
             </div>
-            <div class="section-headline" style="font-family: 'Oswald', sans-serif; font-weight: 800;  ">
+            <div class="section-headline" style="color:#63FF49; font-family:'Syne', sans-serif; font-weight: 700; margin-bottom: 20px;  ">
               Featured Projects
             </div>
             <div class="section-headline-subtext">
@@ -2299,32 +2600,42 @@
             </div>
           </div>
           <div role="list" class="collection-list-featured w-dyn-items">
-            <div role="listitem" class="w-dyn-item">
+            <div role="listitem" class="w-dyn-item" style="color: #000000">
               <a target="_blank"
                 href="https://somiljain15121999.medium.com/redesigning-forminator-ux-case-study-d3331386f016"
                 class="featuredpiece">
                 <div style="
                       background-image: url('https://www.somiljain.com/Forminator.png');
-                    " class="featured-header-block"></div>
+                    "class="featured-header-block"></div>
                 <div class="featured-text-block" id="desktop-card">
-                  <div class="featured-product-name">IMG</div>
-                  <div class="featured-date">DEC 2020 - Jan 2020</div>
-                  <div class="featured-header">
+                    <div class="featured-text-block__mask"></div>
+                  <div class="featured-text-block__text">
+
+                  <div class="featured-product-name" >IMG</div>
+                  <div class="featured-date" style="color:#E2E2E2 ;">DEC 2020 - Jan 2020</div>
+                  
+                  <div class="featured-header" >
                     Redesigning the Forminator
                   </div>
-                  <div class="description">
+                  <div class="description" >
                     Forminator is a pre-existing application on Channel i
                     (official intranet portal of campus) to generate Forms,
                     polls, and surveys by professors to keep their academic
                     forms segregated at one place.
                   </div>
+                  
+                  <div style="margin-left: 0px; color: #63FF49; position:absolute; bottom: 64px;" class="featuredCTA"> Read Case Study </div>
+                  <img src="./chevron-right.png" style="right: 60px; color: #63FF49; position:absolute; bottom: 64px;" />
                   <div class="skill-wrapper-featured">
                     <div class="divider-featured"></div>
-                    <div class="coming-soon-badge-wrap">
+                   
+                    <!-- <div class="coming-soon-badge-wrap">
                       <div class="coming-soon-txt">Read on medium >></div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
+              
+              </div>
                 <div class="featured-text-block" id="mobile-card">
                   <div class="featured-product-name">IMG</div>
                   <div class="featured-date">DEC 2020 - Jan 2020</div>
@@ -2350,6 +2661,8 @@
                       background-image: url('https://www.somiljain.com/GoogleSummerofCodephoto.png');
                     " class="featured-header-block"></div>
                 <div class="featured-text-block w-clearfix " id="desktop-card">
+                  <div class="featured-text-block__mask"></div>
+                  <div class="featured-text-block__text">
                   <div class="featured-product-name">GSoc'21</div>
                   <div class="featured-date">May 2020 - Present</div>
                   <div class="featured-header">Design Project under CDLI</div>
@@ -2365,7 +2678,7 @@
                       <div class="coming-soon-txt">Read Final Report >></div>
                     </div>
                   </div>
-                </div>
+                </div></div>
                 <div class="featured-text-block w-clearfix" id="mobile-card">
                   <div class="featured-product-name">GSoC'21</div>
                   <div class="featured-date">May 2020 - Present</div>
