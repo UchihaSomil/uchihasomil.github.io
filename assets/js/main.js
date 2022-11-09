@@ -64,12 +64,12 @@
     //--------------------------------------------------
     // Parralax
     //--------------------------------------------------
-    var headermove = $('#headmove').get(0);
-    var parallaxInstance = new Parallax(headermove, {
-        relativeInput: true,
-        scalarX: 14,
-        hoverOnly: false,
-    });
+    // var headermove = $('#headmove').get(0);
+    // var parallaxInstance = new Parallax(headermove, {
+    //     relativeInput: true,
+    //     scalarX: 14,
+    //     hoverOnly: false,
+    // });
 
 
     //--------------------------------------------------
@@ -119,13 +119,13 @@
         loadTL.play();
     }
 
-    $('.load-spiral').on('click', function (e) {
-        e.preventDefault();
-        setTimeout(function (url) {
-            window.location = url
-        }, 1000, this.href);
-        HideLoad();
-    });
+    // $('.load-spiral').on('click', function (e) {
+    //     e.preventDefault();
+    //     setTimeout(function (url) {
+    //         window.location = url
+    //     }, 1000, this.href);
+    //     HideLoad();
+    // });
 
 
     //--------------------------------------------------
@@ -181,10 +181,32 @@
     });
 
 
-    luxy.init({
-        wrapper: '#spiral',
-        wrapperSpeed: '0.07',
+
+    //Animation 
+    
+    $(window).on('resize', function () {
+        animateElement();
     });
+
+    $(window).on('scroll', function () {
+        animateElement();
+    });
+    function animateElement(e) {
+        $(".animate").each(function (i) {
+            
+            var top_of_object = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if ((bottom_of_window - 70) > top_of_object) {
+                $(this).addClass('show-it');
+                // console.log("I am running")
+            }
+        });
+    }
+
+    // luxy.init({
+    //     wrapper: '#spiral',
+    //     wrapperSpeed: '0.07',
+    // });
 
     //--------------------------------------------------
     // Cursor

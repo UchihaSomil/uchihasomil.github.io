@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/plugin.css">
+    <link rel="stylesheet" href="/assets/css/casestudy.css">
+    <link rel="stylesheet" href="/assets/css/casestudyresponsive.css">
+    <title>Document</title>
+    <script>
+            function parallax_height() {
+  var scroll_top = $(this).scrollTop();
+  var sample_section_top = $(".sample-section").offset().top;
+  var header_height = $(".sample-header-section").outerHeight();
+  $(".sample-section").css({ "margin-top": header_height });
+  $(".sample-header").css({ height: header_height - scroll_top });
+}
+parallax_height();
+$(window).scroll(function() {
+  parallax_height();
+});
+$(window).resize(function() {
+  parallax_height();
+});
+    </script>
+</head>
+<body id="spiral" style="background-color: black; height: 100vh; width:100vw; display: flex; align-items: center;">
+           <div class="col" style="height: 100vh; width:20vw;background-color:red;">Somil</div>
+        <div class="col cursorZoom" style="height: 100vh; width:20vw;background-color:blueviolet">Pranav</div>
+        <div class="col" style="height: 100vh; width:20vw;background-color:greenyellow">Ritik</div>
+        <div class="col" style="height: 100vh; width:20vw;background-color:paleturquoise">Harsh</div>
+        <div class="col" style="height: 100vh; width:20vw; background-color:#000000">Tejveer</div>
+
+        <div class="cursor1" id="cursor1"></div>
+        <div class="cursor" id="cursor"></div>
+    
+        <script src="/assets/js/plugin.js"></script>
+        <script src="/assets/js/main.js"></script>
+
+    
+</body>
+</html>
